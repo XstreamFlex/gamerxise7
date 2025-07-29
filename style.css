@@ -1,0 +1,146 @@
+:root {
+  --ps-blue: #0070d1;
+  --xbox-green: #107c10;
+  --bg: #ffffff;
+  --text: #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background-color: var(--xbox-green);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin: 0 1rem;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--bg);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--bg);
+  margin: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+.hero .cta {
+  background-color: var(--ps-blue);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hero .cta:hover {
+  transform: scale(1.05);
+}
+
+.features, .pricing, .testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.feature, .plan, .testimonial {
+  background-color: var(--bg);
+  border: 1px solid var(--text);
+  padding: 1rem;
+  margin: 1rem;
+  width: calc(33.333% - 2rem);
+  text-align: center;
+}
+
+.feature img, .testimonial img {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  background-color: var(--xbox-green);
+  color: var(--bg);
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--bg);
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .feature, .plan, .testimonial {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .nav-links li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .feature, .plan, .testimonial {
+    width: 100%;
+  }
+}
